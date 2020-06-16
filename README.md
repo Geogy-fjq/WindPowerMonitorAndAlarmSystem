@@ -4,12 +4,14 @@
     实现风电机组数据的实时数据清洗和监控指标报警。  
     利用风场实时采集的风电机组运行数据，对数据进行实时清洗，保证数据的质量。同时处理后的数据划分为正常数据和不合理数据，分别存储到HBase中，作为历史数据日后分析。通过时间窗口对正常数据进行指标监控，指标数值超出特定界限时给出报警信息，并存储到MySQL，最后推送到Web端实时展示报警信息，展示内容包括报警信息列表（机组编号、报警时间、报警描述），以及每台风机近1小时每10分钟报警数量的曲线图。  
     数据清洗规则开放前端页面来配置写入，保存到MySQL数据库中，每次启动时加载规则。报警信息采用WebSocket主动推送的方式，一旦产生报警就推送到Web端展示。报警数量的曲线图通过ECharts图表进行绘制。  
-<div align=center><img src="https://github.com/Geogy-fjq/WindPowerMonitorAndAlarmSystem/blob/master/READMEPhoto/p1.png" width="600"></div> 
+<div align=center><img src="https://github.com/Geogy-fjq/WindPowerMonitorAndAlarmSystem/blob/master/READMEPhoto/p1.png" width="800"></div>  
+   
 ### 项目环境  
     操作系统：Microsoft Windows 10  
     开发环境：IntelliJ IDEA 2019.3.4、TOMCAT 9、JDK 1.8  
     数据库：MYSQL 5.1.31、Hbase 2.2.2  
     大数据：Zokkeper 3.5.5、Kafka 2.11.0、Storm1.1.1  
+    
 ### 系统设计  
 1.	模拟实时数据生产  
     读取CSV文件（WT02287.csv、WT02288.csv、WT02289.csv）中的数据，保存到Kafka的Topic中，再由Storm程序实时读取。  
