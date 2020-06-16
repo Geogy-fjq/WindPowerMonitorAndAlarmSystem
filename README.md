@@ -31,7 +31,8 @@
 ### 项目成果  
 1. 监控报警页面  
 <div align=center><img src="https://github.com/Geogy-fjq/WindPowerMonitorAndAlarmSystem/blob/master/READMEPhoto/p14.png" width="800"></div> 
-2. 设置数据清洗规则和监控报警条件  
+2. 设置数据清洗规则和监控报警条件    
+  
 设置页面：  
 <div align=center><img src="https://github.com/Geogy-fjq/WindPowerMonitorAndAlarmSystem/blob/master/READMEPhoto/p15.png" width="800"></div> 
 
